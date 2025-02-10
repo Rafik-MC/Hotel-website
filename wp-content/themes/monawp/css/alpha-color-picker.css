@@ -1,0 +1,255 @@
+/**
+ * Alpha Color Picker CSS
+ */
+ 
+.customize-control-alpha-color .wp-color-result-text {
+	display:none
+}
+
+.customize-control-alpha-color .wp-color-result.button {
+    min-height: 30px;
+    margin: 0 5px 5px 0;
+    padding: 0 0 0 30px;
+    font-size: 11px;
+	border:1px solid #333;
+	border-radius:0;
+	transition:0.5s
+}
+
+.customize-control-alpha-color .wp-color-result.wp-picker-open {
+	width:100%;
+}
+
+.customize-control-alpha-color .wp-picker-container .iris-picker {
+	border-bottom:none;
+}
+
+.customize-control-alpha-color .wp-picker-container {
+	max-width: 257px;
+}
+
+.customize-control-alpha-color .wp-picker-open + .wp-picker-input-wrap {
+	width: 100%;
+	margin-top:2px;
+}
+
+.customize-control-alpha-color .wp-picker-input-wrap input[type="text"].wp-color-picker.alpha-color-control {
+	float: left;
+	width: 195px;
+}
+
+.customize-control-alpha-color .wp-picker-input-wrap .button {
+	margin-left: 0;
+	float: right;
+}
+
+.wp-picker-container .wp-picker-open ~ .wp-picker-holder .alpha-color-picker-container {
+	display: block;
+}
+
+.alpha-color-picker-container {
+	border: 1px solid #dcdcde;
+	border-top: none;
+	display: none;
+	background: #FFF;
+	padding: 0 11px 10px;
+	position: relative;
+}
+
+.alpha-color-picker-container .ui-widget-content,
+.alpha-color-picker-container .ui-widget-header,
+.alpha-color-picker-wrap .ui-state-focus {
+	background: transparent;
+	border: none;
+}
+
+.alpha-color-picker-wrap a.iris-square-value:focus {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.alpha-color-picker-container .ui-slider {
+	position: relative;
+	z-index: 1;
+	height: 24px;
+	text-align: center;
+	margin: 0 auto;
+	width: 88%;
+	width: calc( 100% - 28px );
+}
+
+.alpha-color-picker-container .ui-slider-handle,
+.alpha-color-picker-container .ui-widget-content .ui-state-default {
+	color: #777;
+	background-color: #FFF;
+	text-shadow: 0 1px 0 #FFF;
+	text-decoration: none;
+	position: absolute;
+	z-index: 2;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	border: 1px solid #aaa;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin-top: -2px;
+	top: 0;
+	height: 26px;
+	width: 26px;
+	cursor: ew-resize;
+	font-size: 0;
+	padding: 0;
+	line-height: 27px;
+	margin-left: -14px;
+}
+
+.alpha-color-picker-container .ui-slider-handle.show-opacity {
+	font-size: 12px;
+}
+
+.alpha-color-picker-container .click-zone {
+	width: 14px;
+	height: 24px;
+	display: block;
+	position: absolute;
+	left: 10px;
+}
+
+.alpha-color-picker-container .max-click-zone {
+	right: 10px;
+	left: auto;
+}
+
+.alpha-color-picker-container .transparency {
+	height: 24px;
+	width: 100%;
+	background-color: #FFF;
+	background-image: url(../images/transparency-grid.png);
+	box-shadow: 0 0 5px rgba(0,0,0,0.4) inset;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 0;
+	margin-top: -24px;
+}
+
+@media only screen and (max-width: 782px) {
+	.customize-control-alpha-color .wp-picker-input-wrap input[type="text"].wp-color-picker.alpha-color-control {
+		width: 184px;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.customize-control-alpha-color .wp-picker-input-wrap input[type="text"].wp-color-picker.alpha-color-control {
+		width: 172px;
+		height: 33px;
+	}
+}
+
+.monawp-rgba-container {
+  display: flex;
+  align-items: center;
+}
+
+.monawp-rgba-button {
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.monawp-rgba-button.expanded {
+  background-color: #ccc;
+}
+
+.monawp-rgba-preview {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 2px;
+}
+
+.monawp-rgba-preview-text {
+  display: none;
+  font-size: 10px;
+}
+
+.monawp-rgba-button-text {
+  margin-left: 5px;
+}
+
+.monawp-rgba-picker {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 5px;
+  z-index: 999;
+  width: 200px;
+}
+
+.monawp-rgba-opacity {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.monawp-rgba-opacity label {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.monawp-rgba-opacity-slider {
+  width: 100px;
+}
+
+.monawp-rgba-clear-button {
+  margin-left: 10px;
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#accordion-section-themes > h3,
+#customize-info,
+li.panel-meta.customize-info {
+	margin-bottom:0 !important
+}
+
+.customize-control-description {
+    margin-bottom: 10px !important
+}
+
+input[type="range"] {
+    width: 80.5% !important;
+}
+
+#customize-controls .customizer-range-value {
+    font-size: 16px;
+    color: rgba(118, 118, 118);
+    background: #fff;
+    padding: 0px 5px;
+    float: right;
+    margin-top: -10px;
+    width: 40px;
+    text-align: center;
+}
+
+.edit-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    cursor: pointer;
+}
